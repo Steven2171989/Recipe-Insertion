@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : Culinary
+Version    : 1.0
+Released   : 20100218
+Description: A two-column fixed-width template suitable for small websites.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Recipe Insertion</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="~/CSS/default.css" rel="stylesheet" />
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+</head>
+<body style="background-color:lightcoral;">
+<div id="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="#">Recipe</a></h1>
+      <h2><a href="http://www.freecsstemplates.org/">Insertion</a></h2>
+    </div>
+    <!-- end div#logo -->
+  </div>
+  <!-- end div#header -->
+  <div id="menu">
+      <ul>
+          
+          <li class=""><a href=@Url.Action("Index", "Home")>Home</a></li>
+          <li class=""><a href=@Url.Action("About", "Home")>About</a></li>
+          <li class=""><a href=@Url.Action("Contact", "Home")>Contact</a></li>
+          <li class=""><a href=@Url.Action("Index", "Recipes")>Add Recipe</a></li>
+          @*<li class=""><a href=@Url.Action("Index", "Ingredients")>Add Ingredient</a></li>*@
+          
+      </ul> @Html.Partial("~/Views/Shared/_LoginPartial.cshtml")
+  </div>
+  <!-- end div#menu -->
+
+  <div id="page">
+    <div id="page-bgtop">
+      <div id="content">
+        @RenderBody()
+      </div>
+      <!-- end div#content -->
+      <div id="sidebar">
+        <ul>
+          <li id="search">
+            <h2 class="search">Search</h2>
+            <form method="get" action="@Url.Action("Search", "Recipes")">
+              <fieldset>
+              <input type="text" id="search-text" name="id" value="" />
+              <input type="submit" id="search-submit" value="Search" />
+              </fieldset>
+            </form>
+          </li>
+          <li>
+            @*<h2 class="categories">Store Recipes</h2>*@
+            <ul>
+              @*<li><a href="#">Recipe 1</a></li>
+              <li><a href="#">Recipe 2</a></li>
+              <li><a href="#">Recipe 3</a></li>
+              <li><a href="#">Recipe 4</a></li>
+              <li><a href="#">Recipe 5</a></li>
+              <li><a href="#">Recipe 6</a></li>
+              <li><a href="#">Recipe 7</a></li>*@
+            </ul>
+          </li>
+          <li>
+            @*<h2>Recipes</h2>*@
+            <ul>
+              @*<li><a href="#">Recipe 1</a></li>
+              <li><a href="#">Recipe 2</a></li>
+              <li><a href="#">Recipe 3</a></li>
+              <li><a href="#">Recipe 4</a></li>
+              <li><a href="#">Recipe 5</a></li>
+              <li><a href="#">Recipe 6</a></li>
+              <li><a href="#">Recipe 7</a></li>*@
+            </ul>
+          </li>
+          <li>
+            @*<h2>Recipes</h2>*@
+            <ul>
+              @*<li><a href="#">Recipe 1</a></li>
+              <li><a href="#">Recipe 2</a></li>
+              <li><a href="#">Recipe 3</a></li>
+              <li><a href="#">Recipe 4</a></li>
+              <li><a href="#">Recipe 5</a></li>
+              <li><a href="#">Recipe 6</a></li>
+              <li><a href="#">Recipe 7</a></li>
+              <li><a href="#">Recipe 8</a></li>*@
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- end div#sidebar -->
+      <div style="clear: both; height: 2px"></div>
+    </div>
+  </div>
+  <!-- end div#page -->
+  <div id="footer">
+    <p>Copyright &copy; 2007 Culinary. All Rights Reserved. Designed by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.&nbsp;&nbsp;<a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+  </div>
+  <!-- end div#footer -->
+</div>
+<!-- end div#wrapper -->
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>
+@RenderSection("Scripts", false)
+</body>
+</html>
